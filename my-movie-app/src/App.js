@@ -1,38 +1,11 @@
-// import logo from './logo.svg';
+
 import './App.css';
-// import './index.css';
 import React from 'react';
 import axios from 'axios';
-
-
-
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-
-// function App() {
-//   return (
-
-
+import { library } from '@fortawesome/fontawesome-svg-core'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+library.add(faSearch)
 
 
 class MoviesList extends React.Component {
@@ -80,7 +53,8 @@ class MoviesList extends React.Component {
                       onChange={this.handleChange}
                   />
                   <button type="submit">
-                      <i className="fa fa-search" />
+                      <FontAwesomeIcon icon={faSearch} />
+
                   </button>
               </form>
               {moviesList.length > 0 ? (
