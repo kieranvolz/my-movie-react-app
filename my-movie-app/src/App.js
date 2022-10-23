@@ -1,7 +1,6 @@
 import './App.css';
 import React from 'react';
 import axios from 'axios';
-// import mySvg from './magnifying-glass-solid.svg'
 
 
 class MoviesList extends React.Component {
@@ -49,11 +48,8 @@ class MoviesList extends React.Component {
                       onChange={this.handleChange}
                   />
                   <button type="submit">
-                  {/* <img src="magnifying-glass-solid.svg" alt="SVG as an image"> */}
-
-
- {/* <FontAwesomeIcon icon="fa-magnifying-glass" />  */}
-                                                          {/* <i className="fa fa-search" /> */}
+                  {/* <FontAwesomeIcon icon="fa-solid fa-magnifying-glass" /> */}
+                                        {/* <i className="fa fa-search" /> */}
                   </button>
               </form>
               {moviesList.length > 0 ? (
