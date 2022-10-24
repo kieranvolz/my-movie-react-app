@@ -2,10 +2,14 @@
 import './App.css';
 import React from 'react';
 import axios from 'axios';
+// import dotenv from 'dotenv';
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 library.add(faSearch)
+//  require(dotenv).config();
+
+
 
 
 class MoviesList extends React.Component {
@@ -16,9 +20,10 @@ class MoviesList extends React.Component {
 
   search = event => {
       event.preventDefault();
+
       axios
           .get(
-              `https://www.omdbapi.com/?apikey=b04e4c15&s=${
+              `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&s=${
                   this.state.searchTerm
               }&plot=full`
           )
@@ -78,9 +83,10 @@ class MovieCard extends React.Component {
   };
 
   componentDidMount() {
+
       axios
           .get(
-              `https://www.omdbapi.com/?apikey=b04e4c15&i=${
+              `https://www.omdbapi.com/?apikey=${process.env.REACT_APP_API_KEY}&i=${
                   this.props.movieID
               }&plot=full`
           )
@@ -138,6 +144,6 @@ class MovieCard extends React.Component {
       );
   }
 } 
-//}
+
 
 export default MoviesList;
