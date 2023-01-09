@@ -2,12 +2,12 @@
 import './App.css';
 import React from 'react';
 import axios from 'axios';
+
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 library.add(faSearch)
 
-console.log(process.env.REACT_APP_API_KEY);
 
 
 class MoviesList extends React.Component {
